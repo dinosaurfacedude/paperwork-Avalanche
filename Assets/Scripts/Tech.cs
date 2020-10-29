@@ -18,6 +18,6 @@ public class Tech : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        collision.gameObject.name)
+        Debug.Log(collision.gameObject.name);
     }
 }
