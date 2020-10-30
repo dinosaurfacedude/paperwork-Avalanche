@@ -13,6 +13,7 @@ public class Mail : MonoBehaviour
     public int layer;
 
     public BossBar bossBar;
+    public buttonScript myButton;
 
     public Mail(BossBar b)
     {
@@ -68,6 +69,7 @@ public class Mail : MonoBehaviour
         if(collision.gameObject.name.Equals(topic))
         {
       //      bossBar.lowerWork();
+            myButton.gainSleep(15);
             Destroy(this.gameObject);
         }
     }
