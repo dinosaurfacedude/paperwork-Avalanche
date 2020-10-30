@@ -12,13 +12,8 @@ public class Mail : MonoBehaviour
     public Sprite electSprite;
     public int layer;
 
-    public BossBar bossBar;
-    public buttonScript myButton;
+    public Rigidbody2D rb;
 
-    public Mail(BossBar b)
-    {
-        bossBar = b;
-    }
     // Start is called before the first frame update
     void Start()
     {
@@ -72,8 +67,6 @@ public class Mail : MonoBehaviour
     {
         if(collision.gameObject.name.Equals(topic))
         {
-            //      bossBar.lowerWork();
-            // myButton.gainSleep(15);
             if (Globals.bossInt < 1)
             {
                 Globals.bossInt = 0;
@@ -81,6 +74,11 @@ public class Mail : MonoBehaviour
             else
             {
                 Globals.bossInt = Globals.bossInt - 1;
+            }
+            int number = UnityEngine.Random.Range(1, 100);
+            if(number>=25 && number <= 50)
+            {
+                Globals.sleep += 1;
             }
             Debug.Log(Globals.bossInt);
             Destroy(this.gameObject);

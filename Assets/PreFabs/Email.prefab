@@ -102,6 +102,10 @@ MonoBehaviour:
   itSprite: {fileID: 21300000, guid: 829eaaadcad33f04092e3ba0a1eadbf6, type: 3}
   waterSprite: {fileID: 21300000, guid: ce98a5536cec2464aab2505f1e8f9c5b, type: 3}
   electSprite: {fileID: 21300000, guid: ae274be4c04da5041ae1a4cbf0d54f56, type: 3}
+  layer: 0
+  bossBar: {fileID: 0}
+  myButton: {fileID: 0}
+  rb: {fileID: -247103027933054186}
 --- !u!61 &130040863132695620
 BoxCollider2D:
   m_ObjectHideFlags: 0
