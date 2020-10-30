@@ -10,11 +10,21 @@ public class Mail : MonoBehaviour
     public Sprite itSprite;
     public Sprite waterSprite;
     public Sprite electSprite;
+    public int layer;
+
+    public BossBar bossBar;
+
+    public Mail(BossBar b)
+    {
+        bossBar = b;
+    }
     // Start is called before the first frame update
     void Start()
     {
         int number = UnityEngine.Random.Range(1, 4);
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+        layer = UnityEngine.Random.Range(0, 3);
+        this.spriteRenderer.sortingOrder = layer;
         if (number == 1)
         {
             topic = "Wrench";
@@ -37,6 +47,7 @@ public class Mail : MonoBehaviour
     {
 
     }
+
     private Vector3 screenPoint;
     private Vector3 offset;
 
@@ -54,9 +65,9 @@ public class Mail : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log(collision.gameObject.name.Equals(topic));
         if(collision.gameObject.name.Equals(topic))
         {
+            bossBar.lowerWork();
             Destroy(this.gameObject);
         }
     }
