@@ -6,14 +6,29 @@ using UnityEngine;
 public class Mail : MonoBehaviour
 {
     public string topic = "";
+    public SpriteRenderer spriteRenderer;
+    public Sprite itSprite;
+    public Sprite waterSprite;
+    public Sprite electSprite;
     // Start is called before the first frame update
     void Start()
     {
-        int number = UnityEngine.Random.Range(1, 3);
-
+        int number = UnityEngine.Random.Range(1, 4);
+        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         if (number == 1)
         {
             topic = "Wrench";
+            spriteRenderer.sprite = itSprite; 
+        }
+        else if (number == 2)
+        {
+            topic = "Water";
+            spriteRenderer.sprite = waterSprite;
+        }
+        else
+        {
+            topic = "Elect";
+            spriteRenderer.sprite = electSprite;
         }
     }
 

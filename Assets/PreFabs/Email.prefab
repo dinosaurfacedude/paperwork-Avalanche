@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 829eaaadcad33f04092e3ba0a1eadbf6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6d5036d8ffb3c6745b8e96ba8ab956c3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -98,6 +98,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   topic: 
+  spriteRenderer: {fileID: 0}
+  itSprite: {fileID: 21300000, guid: 829eaaadcad33f04092e3ba0a1eadbf6, type: 3}
+  waterSprite: {fileID: 21300000, guid: ce98a5536cec2464aab2505f1e8f9c5b, type: 3}
+  electSprite: {fileID: 21300000, guid: ae274be4c04da5041ae1a4cbf0d54f56, type: 3}
 --- !u!61 &130040863132695620
 BoxCollider2D:
   m_ObjectHideFlags: 0
