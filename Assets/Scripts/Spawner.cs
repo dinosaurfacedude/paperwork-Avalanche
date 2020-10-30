@@ -10,12 +10,11 @@ public class Spawner : MonoBehaviour
     Vector2 whereToSpawn;
     public float spawnRate = 2f;
     float nextSpawn = 0;
-
     int randEnemy;
 
     void Start()
     {
-        
+
     }
 
     void Update()

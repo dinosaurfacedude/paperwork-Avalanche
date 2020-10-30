@@ -12,7 +12,7 @@ public class Mail : MonoBehaviour
     public Sprite electSprite;
     public int layer;
 
-    public BossBar bossBar;
+    GameObject boss = GameObject.Find("bossbarUI");
 
     public Mail(BossBar b)
     {
@@ -28,17 +28,20 @@ public class Mail : MonoBehaviour
         if (number == 1)
         {
             topic = "Wrench";
-            spriteRenderer.sprite = itSprite; 
+            spriteRenderer.sprite = itSprite;
+            bossBar.raiseWork();
         }
         else if (number == 2)
         {
             topic = "Water";
             spriteRenderer.sprite = waterSprite;
+            bossBar.raiseWork();
         }
         else
         {
             topic = "Elect";
             spriteRenderer.sprite = electSprite;
+            bossBar.raiseWork();
         }
     }
 
@@ -67,7 +70,7 @@ public class Mail : MonoBehaviour
     {
         if(collision.gameObject.name.Equals(topic))
         {
-            //bossBar.lowerWork();
+            bossBar.lowerWork();
             Destroy(this.gameObject);
         }
     }
