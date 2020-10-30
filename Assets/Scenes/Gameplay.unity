@@ -1393,6 +1393,10 @@ PrefabInstance:
     - {fileID: 8052663196504528529, guid: cfdbc3e2faab7fb43ae96c29ec3db3d3, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: cfdbc3e2faab7fb43ae96c29ec3db3d3, type: 3}
 =======
+=======
+>>>>>>> parent of 7b4b2ea... An attempt
+=======
+>>>>>>> parent of 7b4b2ea... An attempt
 --- !u!61 &1955524535
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1419,4 +1423,10 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.15, y: 0.24}
   m_EdgeRadius: 0
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 7b4b2ea... An attempt
+=======
+>>>>>>> parent of 7b4b2ea... An attempt
+=======
 >>>>>>> parent of 7b4b2ea... An attempt
