@@ -3,7 +3,12 @@ guid: fa6886c2188b51146b6464a8c72cbecc
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - spriteRenderer: {instanceID: 0}
+  - itSprite: {fileID: 21300000, guid: 2f4284a77916dec4b84975c8ad500e4b, type: 3}
+  - waterSprite: {fileID: 21300000, guid: f32d4b76192c414409c46ae9285d516b, type: 3}
+  - electSprite: {fileID: 21300000, guid: 93185662f4c550e4aad1eba4d79567d6, type: 3}
+  - bossBar: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

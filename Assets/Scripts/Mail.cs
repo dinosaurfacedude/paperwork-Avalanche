@@ -28,7 +28,7 @@ public class Mail : MonoBehaviour
         if (number == 1)
         {
             topic = "Wrench";
-            spriteRenderer.sprite = itSprite; 
+            spriteRenderer.sprite = itSprite;
         }
         else if (number == 2)
         {
@@ -67,7 +67,7 @@ public class Mail : MonoBehaviour
     {
         if(collision.gameObject.name.Equals(topic))
         {
-            bossBar.lowerWork();
+      //      bossBar.lowerWork();
             Destroy(this.gameObject);
         }
     }
