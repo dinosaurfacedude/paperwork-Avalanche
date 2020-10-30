@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    public GameObject enemy;
+    public GameObject emailPrefab;
     float randX;
     Vector2 whereToSpawn;
     public float spawnRate = 2f;
@@ -24,7 +24,8 @@ public class Spawner : MonoBehaviour
             nextSpawn = Time.time + spawnRate;
             randX = Random.Range(-8.4f, 8.4f);
             whereToSpawn = new Vector2(randX, transform.position.y);
-            Instantiate(enemy, whereToSpawn, Quaternion.identity);
+            GameObject a = Instantiate(emailPrefab) as GameObject;
+            a.transform.position = whereToSpawn;
         }
     }
 
