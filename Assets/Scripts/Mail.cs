@@ -67,7 +67,7 @@ public class Mail : MonoBehaviour
     {
         if(collision.gameObject.name.Equals(topic))
         {
-            //bossBar.lowerWork();
+            bossBar.lowerWork();
             Destroy(this.gameObject);
         }
     }
