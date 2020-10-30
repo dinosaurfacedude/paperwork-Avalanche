@@ -46,7 +46,11 @@ public class Mail : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (UnityEngine.Random.Range(1, 100) % 6 == 0)
+        {
+            Globals.bossInt = Globals.bossInt + 0.01f;
+            Debug.Log(Globals.bossInt);
+        }
     }
 
     private Vector3 screenPoint;
@@ -68,8 +72,17 @@ public class Mail : MonoBehaviour
     {
         if(collision.gameObject.name.Equals(topic))
         {
-      //      bossBar.lowerWork();
-            myButton.gainSleep(15);
+            //      bossBar.lowerWork();
+            // myButton.gainSleep(15);
+            if (Globals.bossInt < 1)
+            {
+                Globals.bossInt = 0;
+            }
+            else
+            {
+                Globals.bossInt = Globals.bossInt - 1;
+            }
+            Debug.Log(Globals.bossInt);
             Destroy(this.gameObject);
         }
     }

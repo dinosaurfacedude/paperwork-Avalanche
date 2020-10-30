@@ -14,15 +14,7 @@ public class BossBar : MonoBehaviour
     }
     public void Update()
     {
-        if (UnityEngine.Random.Range(1, 100) % 25 == 0)
-        {
-            slider.value = slider.value+1;
-        }
-    }
-
-    public void lowerWork()
-    {
-        slider.value = slider.value - 1;
+        slider.value = Globals.bossInt;
     }
 
 }
