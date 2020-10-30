@@ -3,22 +3,26 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 public class BossBar : MonoBehaviour
-
 {
     public Slider slider;
 
-    public void raiseWork(){
-          slider.value = slider.value+1;
-          if(slider.value == 20){
-            SceneManager.LoadScene("gameOver");
-          }
+    public void Start()
+    {
+        
+    }
+    public void Update()
+    {
+        if (UnityEngine.Random.Range(1, 100) % 25 == 0)
+        {
+            slider.value = slider.value+1;
+        }
     }
 
     public void lowerWork()
     {
         slider.value = slider.value - 1;
     }
+
 }
