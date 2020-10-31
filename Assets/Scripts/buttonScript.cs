@@ -10,16 +10,16 @@ public class buttonScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void OnMouseDown()
     {
-        if (Time.time > nextLower)
-        {
+        //if (Time.time > nextLower)
+        //{
             nextLower = Time.time + UnityEngine.Random.Range(1, 10);
-            Globals.sleep -= 1;
-        }
+            Globals.sleep -= 5;
+        //}
     }
 }

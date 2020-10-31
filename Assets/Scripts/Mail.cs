@@ -43,8 +43,8 @@ public class Mail : MonoBehaviour
     {
         if (UnityEngine.Random.Range(1, 100) % 6 == 0)
         {
-            Globals.bossInt = Globals.bossInt + 0.01f;
-            Debug.Log(Globals.bossInt);
+            Globals.bossInt = Globals.bossInt + 0.1f;
+            //Debug.Log(Globals.bossInt);
         }
     }
 
@@ -73,12 +73,12 @@ public class Mail : MonoBehaviour
             }
             else
             {
-                Globals.bossInt = Globals.bossInt - 1;
+                Globals.bossInt = Globals.bossInt - 15;
             }
             int number = UnityEngine.Random.Range(1, 100);
             if(number>=25 && number <= 50)
             {
-                Globals.sleep += 1;
+                Globals.sleep += 5;
             }
             Debug.Log(Globals.bossInt);
             Destroy(this.gameObject);
